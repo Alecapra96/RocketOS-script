@@ -43,7 +43,7 @@ sudo mv ~/RocketOS-script/sxhkdrc ~/.config/sxhkd/
 
 #Creo el script del bspwm
 mkdir ~/.config/bspwm/scripts/
-sudo mv ~/RocketOS-script/bspwm_resize ~/.config/sxhkd/scripts/
+sudo mv ~/RocketOS-script/bspwm_resize ~/.config/bspwm/scripts/
 sudo chmod +x ~/.config/bspwm/scripts/bspwm_resize
 
 
