@@ -26,17 +26,18 @@ cp examples/sxhkdrc ~/.config/sxhkd/
 
 #Instalo el script de startx
 sudo apt -y install xinit
+wait 5000
 #Creo el archivo .xinitrc
 sudo mv ~/RocketOS-script/.xinitrc ~/.xinitrc
 
 
-
+wait 5000
 #Instalo programas base 
 sudo apt -y install thunar screenfetch neofetch slim git lxappearance-obconf lxappearance rofi htop feh tint2 libgtk-3-dev compton rdesktop  
 
 #borro snapd que esta al pedo
 sudo apt -y purge snapd
-
+wait 5000
 #Cambiar configuracion bspwm y sxhkd 
     #LINA 127 dl sxhkdrc hay que poner un $hostname
 sudo mv ~/RocketOS-script/sxhkdrc ~/.config/sxhkd/
@@ -47,24 +48,24 @@ mkdir ~/.config/bspwm/scripts/
 sudo mv ~/RocketOS-script/bspwm_resize ~/.config/bspwm/scripts/
 sudo chmod +x ~/.config/bspwm/scripts/bspwm_resize
 
-
+wait 5000
 #Agregar TINT2 configuracion
     #Borrar si existe
 sudo rm ~/.config/tint2/tint2rc
 sudo mv ~/RocketOS-script/tint2rc ~/.config/tint2/
-
+wait 5000
 #Agregar transparencia
 #Agregar configuracion de xterm
 sudo mv ~/RocketOS-script/.Xresources ~/
 xrdb -merge ~/.Xresources
-
+wait 5000
 #configuro Slim
 cd ~/RocketOS-script/
 git clone https://github.com/adi1090x/slim_themes
 sudo mv ~/RocketOS-script/slim_themes/themes/hello /usr/share/slim/themes
-
+wait 5000
 sudo sed -i '37s+.*+ login_cmd           exec /bin/bash - ~/.xinitrc %session +g' /etc/slim.conf
 sudo sed -i '70s+.*+default_user       v4ntush+g' /etc/slim.conf
 sudo sed -i '83s+.*+current_theme       hello+g' /etc/slim.conf
-
+wait 5000
 kill -9 -1
