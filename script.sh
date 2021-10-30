@@ -58,11 +58,7 @@ cp ~/RocketOS-script/bspwm_resize ~/.config/bspwm/scripts/
 sleep 5 
 sudo chmod +x ~/.config/bspwm/scripts/bspwm_resize
 
-#Agregar TINT2 configuracion
-sleep 5 
-    #Borrar si existe
-#rm ~/.config/tint2/tint2rc
-cp ~/RocketOS-script/tint2rc ~/.config/tint2/
+
 sleep 5 
 #Agregar transparencia
 #Agregar configuracion de xterm
@@ -78,3 +74,8 @@ sudo sed -i '37s+.*+ login_cmd           exec /bin/bash - ~/.xinitrc %session +g
 sudo sed -i '70s+.*+default_user       v4ntush+g' /etc/slim.conf
 sudo sed -i '83s+.*+current_theme       hello+g' /etc/slim.conf
 #kill -9 -1
+#Agregar TINT2 configuracion
+sleep 5 
+    #Borrar si existe
+#rm ~/.config/tint2/tint2rc
+cp ~/RocketOS-script/tint2rc ~/.config/tint2/
