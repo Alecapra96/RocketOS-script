@@ -6,7 +6,7 @@ sudo apt --fix-missing update
 sudo apt -y install && sudo apt -y upgrade
 sleep 5 
 #Instalo dependencias bases
-sudo apt -y install --no-install-suggests --no-install-recommends xserver-xorg-core software-properties-common broadcom-sta-dkms cmake libfreetype6-dev libfontconfig1-dev xclip build-essential libx11-dev libxft-dev sakura build-essential git vim xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev libxcb-shape0-dev libuv1-dev
+sudo apt -y install --no-install-suggests --no-install-recommends xserver-xorg-core software-properties-common broadcom-sta-dkms cmake libfreetype6-dev libfontconfig1-dev xclip build-essential libx11-dev libxft-dev sakura build-essential git vim xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev libxcb-shape0-dev libuv1-dev x11-xserver-utils
 #Instalo BSPWM
 sleep 5 
 git clone https://github.com/baskerville/bspwm.git
@@ -69,7 +69,7 @@ sleep 5
 cd ~/RocketOS-script/
 git clone https://github.com/adi1090x/slim_themes
 sleep 5 
-cp -r  ~/RocketOS-script/slim_themes/themes/hello /usr/share/slim/themes
+sudo cp -r  ~/RocketOS-script/slim_themes/themes/hello /usr/share/slim/themes
 sudo sed -i '37s+.*+ login_cmd           exec /bin/bash - ~/.xinitrc %session +g' /etc/slim.conf
 sudo sed -i '70s+.*+default_user       v4ntush+g' /etc/slim.conf
 sudo sed -i '83s+.*+current_theme       hello+g' /etc/slim.conf
@@ -80,3 +80,12 @@ sleep 5
 #rm ~/.config/tint2/tint2rc
 mkdir ~/.config/tint2/
 cp ~/RocketOS-script/tint2rc ~/.config/tint2/
+sleep 1
+echo "Reiniciando."
+sleep 1
+echo "Reiniciando.."
+sleep 1
+echo "Reiniciando..."
+sleep 1
+echo "Reiniciando...."
+sudo reboot
