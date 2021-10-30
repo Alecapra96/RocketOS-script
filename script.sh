@@ -40,8 +40,10 @@ sleep 5
 #Instalo programas base 
 sudo apt -y install --no-install-suggests --no-install-recommends thunar screenfetch neofetch git lxappearance-obconf lxappearance rofi htop feh libgtk-3-dev compton rdesktop  
 sleep 5 
-sudo apt -y install slim tint2
+sudo apt -y install slim tint2 xtern
 sleep 5 
+tint2
+sleep 5
 #borro snapd que esta al pedo
 sudo apt -y purge snapd
 sleep 5 
@@ -59,12 +61,12 @@ sudo chmod +x ~/.config/bspwm/scripts/bspwm_resize
 #Agregar TINT2 configuracion
 sleep 5 
     #Borrar si existe
-rm ~/.config/tint2/tint2rc
+#rm ~/.config/tint2/tint2rc
 cp ~/RocketOS-script/tint2rc ~/.config/tint2/
 sleep 5 
 #Agregar transparencia
 #Agregar configuracion de xterm
-cp ~/RocketOS-script/.Xresources ~/
+cp ~/rocketOS-script/.Xresources ~/
 xrdb -merge ~/.Xresources
 sleep 5 
 #configuro Slim
