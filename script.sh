@@ -42,17 +42,29 @@ sudo apt -y purge snapd
 sudo mv ~/RocketOS-script/sxhkdrc ~/.config/sxhkd/
 
 #Creo el script del bspwm
+    #Crear si no existe
 mkdir ~/.config/bspwm/scripts/
 sudo mv ~/RocketOS-script/bspwm_resize ~/.config/bspwm/scripts/
 sudo chmod +x ~/.config/bspwm/scripts/bspwm_resize
 
 
 #Agregar TINT2 configuracion
+    #Borrar si existe
 sudo rm ~/.config/tint2/tint2rc
 sudo mv ~/RocketOS-script/tint2rc ~/.config/tint2/
 
 #Agregar transparencia
-#Agregar configuracion de sakura
+#Agregar configuracion de xterm
+sudo mv ~/RocketOS-script/.Xresources ~/
+xrdb -merge ~/.Xresources
 
+#configuro Slim
+cd ~/RocketOS-script/
+git clone https://github.com/adi1090x/slim_themes
+sudo mv ~/RocketOS-script/slim_themes/themes/hello /usr/share/slim/themes
 
+sudo sed -i '37s+.*+ login_cmd           exec /bin/bash - ~/.xinitrc %session +g' /etc/slim.conf
+sudo sed -i '70s+.*+default_user       v4ntush+g' /etc/slim.conf
+sudo sed -i '83s+.*+current_theme       hello+g' /etc/slim.conf
 
+kill -9 -1
