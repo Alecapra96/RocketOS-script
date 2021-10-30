@@ -2,6 +2,8 @@
 
 #Actualizo el sistema
 sudo apt -y install && sudo apt -y upgrade
+sudo apt --fix-missing update
+sudo apt -y install && sudo apt -y upgrade
 wait 50000
 #Instalo dependencias bases
 sudo apt -y install --no-install-suggests --no-install-recommends xserver-xorg-core software-properties-common broadcom-sta-dkms cmake libfreetype6-dev libfontconfig1-dev xclip build-essential libx11-dev libxft-dev sakura build-essential git vim xcb libxcb-util0-dev libxcb-ewmh-dev libxcb-randr0-dev libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev libasound2-dev libxcb-xtest0-dev libxcb-shape0-dev libuv1-dev
@@ -36,8 +38,8 @@ sudo mv ~/RocketOS-script/.xinitrc ~/.xinitrc
 
 wait 50000
 #Instalo programas base 
-sudo apt -y install thunar screenfetch neofetch slim git lxappearance-obconf lxappearance rofi htop feh tint2 libgtk-3-dev compton rdesktop  
-
+sudo apt -y install --no-install-suggests --no-install-recommends thunar screenfetch neofetch git lxappearance-obconf lxappearance rofi htop feh libgtk-3-dev compton rdesktop  
+sudo apt -y install slim tint2
 #borro snapd que esta al pedo
 sudo apt -y purge snapd
 wait 50000
@@ -65,7 +67,7 @@ wait 50000
 #configuro Slim
 cd ~/RocketOS-script/
 git clone https://github.com/adi1090x/slim_themes
-sudo mv ~/RocketOS-script/slim_themes/themes/hello /usr/share/slim/themes
+sudo cp ~/RocketOS-script/slim_themes/themes/hello /usr/share/slim/themes
 wait 50000
 sudo sed -i '37s+.*+ login_cmd           exec /bin/bash - ~/.xinitrc %session +g' /etc/slim.conf
 sudo sed -i '70s+.*+default_user       v4ntush+g' /etc/slim.conf
