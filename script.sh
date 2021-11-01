@@ -89,6 +89,14 @@ sleep 5
 #rm ~/.config/tint2/tint2rc
 mkdir ~/.config/tint2/
 cp ~/RocketOS-script/tint2rc ~/.config/tint2/
+#Desistalo byobu
+sudo apt -y remove byobu
+
+#Instalo google chrome
+echo "Instalo google chrome"
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt -y install ./google-chrome-stable_current_amd64.deb
+
 sleep 1
 echo "Reiniciando."
 sleep 1
