@@ -67,6 +67,9 @@ sudo chmod +x ~/.config/bspwm/scripts/bspwm_resize
 
 sleep 5 
 #Agregar transparencia
+cp ~/RocketOS-script/compton.conf ~/.config/
+
+
 #Agregar configuracion de xterm
 cp ~/RocketOS-script/.Xresources ~/
 xrdb -merge ~/.Xresources
