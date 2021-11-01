@@ -53,6 +53,8 @@ sudo apt -y purge snapd
 sleep 5 
 #Cambiar configuracion bspwm y sxhkd 
     #LINA 127 dl sxhkdrc hay que poner un $hostname
+    sudo sed -i "127+.*+        /home/v4ntush/.config/bspwm/scripts/bspwm_resize {west,south,north,east}+g" ~/.config/sxhkd/sxhkdrc
+
 sudo cp ~/RocketOS-script/sxhkdrc ~/.config/sxhkd/
 sleep 5 
 #Creo el script del bspwm
