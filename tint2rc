@@ -268,3 +268,10 @@ tooltip_background_id = 5
 tooltip_font_color = #222222 100
 tooltip_font = Sans 9
 
+# Executor 1  
+execp = new  
+execp_command = volumeicon  
+execp_interval = 0  
+execp_has_icon = 1  
+execp_cache_icon = 0  
+execp_continuous = 0  
