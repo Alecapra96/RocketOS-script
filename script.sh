@@ -75,7 +75,7 @@ git clone https://github.com/adi1090x/slim_themes
 sleep 5 
 sudo cp -r  ~/RocketOS-script/slim_themes/themes/hello /usr/share/slim/themes
 sudo sed -i '37s+.*+ login_cmd           exec /bin/bash - ~/.xinitrc %session +g' /etc/slim.conf
-sudo sed -i '70s+.*+default_user       v4ntush+g' /etc/slim.conf
+sudo sed -i "70s+.*+default_user       ${hostname}+g" /etc/slim.conf
 sudo sed -i '83s+.*+current_theme       hello+g' /etc/slim.conf
 #kill -9 -1
 #Agregar TINT2 configuracion
