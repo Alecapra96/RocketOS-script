@@ -44,7 +44,9 @@ sleep 5
 #Instalo programas base 
 sudo apt -y install --no-install-suggests --no-install-recommends thunar screenfetch neofetch git lxappearance-obconf lxappearance rofi htop feh libgtk-3-dev compton rdesktop  
 sleep 5 
-sudo apt -y install slim tint2 xterm arandr gedit volumeicon-alsa
+sudo apt -y install slim tint2 xterm arandr gedit 
+#Pesa mucho
+#sudo apt -y install volumeicon-alsa
 sleep 5 
 tint2
 sleep 5
